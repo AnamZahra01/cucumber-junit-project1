@@ -498,5 +498,16 @@ public class BrowserUtils {
     }
 
 
+    public static void clickElement(WebElement element){ //to check if element is there to be clicked (ByAdam)
+        waitForVisibility(element,10);
+        waitFor(1);
+      //  waitForClickability(element,10);
+        element.click();
+    }
+
+    public static void verifyTitleAdam(String title){
+        Assert.assertTrue(Driver.getDriver().getTitle().contains(title));
+    }
+
 }
 
